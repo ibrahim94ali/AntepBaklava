@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title> Dükkan {{aldatay}}</ion-title>
+    <ion-buttons right (click)="showConfirm()">
+      <button ion-button icon-only><ion-icon name="checkmark-circle-outline"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+
+   <ion-item>
+    <ion-label> Tarih Seçiniz: </ion-label>
+    <ion-input type="date" [(ngModel)]="dukkan.tarih"></ion-input>
+  </ion-item>
+    <ion-item  id="ilkitem"> </ion-item>
+
+      <ion-item>
+    <ion-label align="left">Aymali</ion-label>
+    <ion-range [(ngModel)]="sayiAymali" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+    <ion-item>
+    <ion-label align="left">Burma</ion-label>
+    <ion-range [(ngModel)]="sayiBurma" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+    <ion-item>
+    <ion-label align="left">Büyük Aymali</ion-label>
+    <ion-range [(ngModel)]="sayiBuyukAymali" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+    <ion-item>
+    <ion-label align="left">Çokoladna Dolma</ion-label>
+    <ion-range [(ngModel)]="sayiCokoladnaDolma" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+  <ion-item>
+    <ion-label align="left">Dolma</ion-label>
+    <ion-range [(ngModel)]="sayiDolma" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+    <ion-item>
+    <ion-label align="left">Dolma Kadayif</ion-label>
+    <ion-range [(ngModel)]="sayiDolmaKadayif" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+    <ion-item>
+    <ion-label align="left">Havuç</ion-label>
+    <ion-range [(ngModel)]="sayiHavuc" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+   <ion-item>
+    <ion-label align="left">Kadayif</ion-label>
+    <ion-range [(ngModel)]="sayiKadayif" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+  <ion-item>
+    <ion-label align="left">Milka</ion-label>
+    <ion-range [(ngModel)]="sayiMilka" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+    <ion-item>
+    <ion-label align="left">Paşa</ion-label>
+    <ion-range [(ngModel)]="sayiPasa" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+   <ion-item>
+    <ion-label align="left">Sarma</ion-label>
+    <ion-range [(ngModel)]="sayiSarma" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+   <ion-item>
+    <ion-label align="left">Şekerpare</ion-label>
+    <ion-range [(ngModel)]="sayiSekerpare" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+   <ion-item>
+    <ion-label align="left">Sütlü Nuriye</ion-label>
+    <ion-range [(ngModel)]="sayiSutluNuriye" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+   <ion-item>
+    <ion-label align="left">Trileçe</ion-label>
+    <ion-range [(ngModel)]="sayiTrilece" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+     <ion-item>
+    <ion-label align="left">Vişna</ion-label>
+    <ion-range [(ngModel)]="sayiVisna" color="danger" pin="true" min="0" max="15" step="1" snaps="true"></ion-range>
+  </ion-item>
+ 
+</ion-list>
+</ion-content>

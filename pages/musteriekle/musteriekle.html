@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      İsmarlama Bilgileri
+    </ion-title>
+     <ion-buttons right (click)="setData()">
+      <button ion-button icon-only><ion-icon name="checkmark-circle-outline"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+      <ion-item id="isim">
+    <ion-label >Müşterinin Adı:</ion-label>
+    <ion-input [(ngModel)]="costumer.isim"></ion-input>
+  </ion-item>
+
+   <ion-item>
+    <ion-label id="tarih">Alacağı Tarih:</ion-label>
+    <ion-input type="date" [(ngModel)]="costumer.tarih"></ion-input>
+  </ion-item>
+
+  <ion-list>
+  <ion-item id="tur">
+    <ion-label>Baklava Türü</ion-label>
+    <ion-select [(ngModel)]="costumer.baklavaturu"  cancelText="İptal" okText="Tamam">>
+      <ion-option value="Aymali">Aymali</ion-option>
+      <ion-option value="Burma">Burma</ion-option>
+      <ion-option value="Buyuk Aymali">Büyük Aymali</ion-option>
+      <ion-option value="Cokoladna Dolma">Çokoladna Dolma</ion-option>
+      <ion-option value="Dolma">Dolma</ion-option>
+      <ion-option value="Dolma Kadayif">Dolma Kadayif</ion-option>
+      <ion-option value="Havuc">Havuç</ion-option>
+      <ion-option value="Kadayif">Kadayif</ion-option>
+      <ion-option value="Milka">Milka</ion-option>
+      <ion-option value="Pasa">Paşa</ion-option>
+      <ion-option value="Sarma">Sarma</ion-option>
+     <ion-option value="Sekerpare">Şekerpare</ion-option>
+      <ion-option value="Sutlu Nuriye">Sütlü Nuriye</ion-option>
+      <ion-option value="Trilece">Trileçe</ion-option>
+      <ion-option value="Visna">Vişna</ion-option>
+      
+      
+
+      
+      
+      
+      
+      
+    </ion-select>
+  </ion-item>
+</ion-list>
+    </ion-list>
+
+</ion-content>

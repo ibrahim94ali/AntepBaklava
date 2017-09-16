@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{tur}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-card>
+  <ion-card-header id="pleksayisi">
+    <ion-icon name="filing"></ion-icon>
+   &emsp;
+    {{sayi}} - Plek
+  </ion-card-header>
+</ion-card>
+
+<ion-card *ngFor="let cost of ProductList" >
+<ion-list (click)="presentActionSheet(cost)">
+    <ion-item id="isim">
+      <ion-icon name="clipboard" item-start></ion-icon>
+      {{cost.isim}}
+    </ion-item>
+    <ion-card-content align="center">
+    {{cost.tarih}}
+  </ion-card-content>
+
+  </ion-list>
+</ion-card>
+
+</ion-content>

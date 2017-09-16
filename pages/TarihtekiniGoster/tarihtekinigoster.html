@@ -1,0 +1,163 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{Baslik}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+  <ion-card-header id="pleksayisi">
+    <ion-icon name="filing"></ion-icon>
+    İsmarlama:  &emsp; {{ismarlamaSayi}} - Plek
+  </ion-card-header>
+</ion-card>
+
+<ion-card *ngFor="let costum of IsmarlamaListesi" (click)="presentActionSheet(costum)" >
+<ion-list>
+    <ion-item id="isim">
+      <ion-icon name="clipboard" item-start></ion-icon>
+      {{costum.isim}}
+    </ion-item>
+    <ion-card-content>
+   <h2> {{costum.tarih}} &emsp; &emsp; {{costum.baklavaturu}} </h2>
+  </ion-card-content>
+
+  </ion-list>
+</ion-card>
+
+ <ion-card id="dukkan" *ngIf ="dukanida">
+  <ion-card-header id="pleksayisi">
+    <ion-icon name="filing"></ion-icon>
+    Dükkan Gv:  &emsp; {{dukkanGvSayi}} - Plek
+  </ion-card-header>
+</ion-card>
+
+<ion-card *ngIf ="dukanida">
+<ion-list *ngFor="let cost of DukkanGvListesi" (click)="presentActionSheetdukkan(cost)">
+    <ion-item id="isim">
+      <ion-icon name="clipboard" item-start></ion-icon>
+       Tarih: {{cost.tarih}}
+    </ion-item>
+    <ion-card-content>
+       <p *ngIf ="cost.Aymali != 0">
+    {{cost.Aymali}}  &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Aymali
+  </p>
+   <p *ngIf ="cost.Burma != 0">
+    {{cost.Burma}}  &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Burma
+  </p>
+  <p *ngIf ="cost.BuyukAymali != 0">
+    {{cost.BuyukAymali}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Büyük Aymali
+  </p>
+  <p *ngIf ="cost.CokoladnaDolma != 0">
+    {{cost.CokoladnaDolma}} &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Çokoladna Dolma
+  </p>
+  <p  *ngIf ="cost.Dolma != 0">
+    {{cost.Dolma}} &emsp; 
+     <ion-icon name="fastforward"></ion-icon> &emsp;  Dolma
+   </p>
+      <p *ngIf ="cost.DolmaKadayif != 0">
+    {{cost.DolmaKadayif}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Dolma Kadayif
+  </p>
+     <p *ngIf ="cost.Havuc != 0">
+    {{cost.Havuc}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Havuç
+  </p>
+    <p *ngIf ="cost.Kadayif != 0">
+    {{cost.Kadayif}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Kadayif
+  </p>
+
+     <p *ngIf ="cost.Milka != 0">
+    {{cost.Milka}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Milka
+  </p>
+     <p *ngIf ="cost.Pasa != 0">
+    {{cost.Pasa}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Paşa
+  </p>
+   <p *ngIf ="cost.Sarma != 0">
+    {{cost.Sarma}} &emsp; 
+     <ion-icon name="fastforward"></ion-icon> &emsp;  Sarma
+  </p>
+   <p *ngIf ="cost.SutluNuriye != 0">
+    {{cost.SutluNuriye}} &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Sütlü Nuriye
+  </p>
+   <p *ngIf ="cost.Sekerpare != 0">
+    {{cost.Sekerpare}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Şekerpare
+  </p>
+   <p *ngIf ="cost.Trilece != 0">
+    {{cost.Trilece}} &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Trileçe
+   </p>
+   <p *ngIf ="cost.Visna != 0">
+    {{cost.Visna}}  &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Vişna
+  </p>
+
+  </ion-card-content>
+  </ion-list>
+</ion-card>
+
+<ion-card id="dukkan" *ngIf ="dukanida">
+  <ion-card-header id="pleksayisi">
+    <ion-icon name="filing"></ion-icon>
+    Dükkan Ohrid: {{dukkanOhSayi}} - Plek
+  </ion-card-header>
+</ion-card>
+
+<ion-card *ngIf ="dukanida">
+<ion-list *ngFor="let cost of DukkanOhListesi" (click)="presentActionSheetdukkan(cost)">
+    <ion-item id="isim">
+      <ion-icon name="clipboard" item-start></ion-icon>
+       Tarih: {{cost.tarih}}
+    </ion-item>
+    <ion-card-content>
+       <p *ngIf ="cost.Aymali != 0">
+    {{cost.Aymali}}  &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Aymali
+  </p>
+   <p *ngIf ="cost.Burma != 0">
+    {{cost.Burma}}  &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Burma
+  </p>
+  <p *ngIf ="cost.BuyukAymali != 0">
+    {{cost.BuyukAymali}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Büyük Aymali
+  </p>
+  <p *ngIf ="cost.CokoladnaDolma != 0">
+    {{cost.CokoladnaDolma}} &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Çokoladna Dolma
+  </p>
+  <p  *ngIf ="cost.Dolma != 0">
+    {{cost.Dolma}} &emsp; 
+     <ion-icon name="fastforward"></ion-icon> &emsp;  Dolma
+   </p>
+      <p *ngIf ="cost.DolmaKadayif != 0">
+    {{cost.DolmaKadayif}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Dolma Kadayif
+  </p>
+     <p *ngIf ="cost.Havuc != 0">
+    {{cost.Havuc}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Havuç
+  </p>
+    <p *ngIf ="cost.Kadayif != 0">
+    {{cost.Kadayif}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Kadayif
+  </p>
+
+     <p *ngIf ="cost.Milka != 0">
+    {{cost.Milka}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Milka
+  </p>
+     <p *ngIf ="cost.Pasa != 0">
+    {{cost.Pasa}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Paşa
+  </p>
+   <p *ngIf ="cost.Sarma != 0">
+    {{cost.Sarma}} &emsp; 
+     <ion-icon name="fastforward"></ion-icon> &emsp;  Sarma
+  </p>
+   <p *ngIf ="cost.SutluNuriye != 0">
+    {{cost.SutluNuriye}} &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Sütlü Nuriye
+  </p>
+   <p *ngIf ="cost.Sekerpare != 0">
+    {{cost.Sekerpare}} &emsp; <ion-icon name="fastforward"></ion-icon> &emsp;  Şekerpare
+  </p>
+   <p *ngIf ="cost.Trilece != 0">
+    {{cost.Trilece}} &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Trileçe
+   </p>
+   <p *ngIf ="cost.Visna != 0">
+    {{cost.Visna}}  &emsp;  <ion-icon name="fastforward"></ion-icon> &emsp;  Vişna
+  </p>
+  </ion-card-content>
+  </ion-list>
+</ion-card>
+
+</ion-content>

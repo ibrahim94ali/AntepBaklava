@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Yapılacaklar
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+     <ion-list>
+       <ion-item>
+          Belirli Tarihe Bak
+    <ion-icon name="calendar" item-end (click)="presentPopoverDate($event)"></ion-icon>
+       </ion-item>
+     </ion-list>
+
+       <ion-item>
+          Model Seçerek İsmarlamalara Bak
+    <ion-icon name="reorder" item-end (click)="presentPopover($event)"></ion-icon>
+       </ion-item>
+
+
+     <ion-card id="ilkkart" (click)="tumIsmarlamalar()">
+  <ion-card-header>
+     <ion-item> <p id="isimler2">
+     Tüm İsmarlamalara Bak
+    <ion-icon name="clipboard" item-end></ion-icon>
+    </p>
+     </ion-item>
+  </ion-card-header>
+</ion-card>
+
+<ion-card id="ilkkart" (click)="tumDukkan('Gv')">
+  <ion-card-header>
+     <ion-item><p id="isimler">
+     Dükkan Gv &emsp;  &emsp;
+     <ion-icon name="filing" item-end ></ion-icon>
+     </p>
+  </ion-item>
+  </ion-card-header>
+</ion-card>
+
+<ion-card id="ilkkart" (click)="tumDukkan('Ohrid')">
+  <ion-card-header>
+     <ion-item> <p id="isimler">
+     Dükkan Ohrid &emsp;
+     <ion-icon name="filing" item-end ></ion-icon>
+     </p>
+  </ion-item>
+  </ion-card-header>
+</ion-card>
+
+
+
+</ion-content>
